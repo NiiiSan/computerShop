@@ -20,8 +20,9 @@ export class EditComputerComponent implements OnInit {
 
   ngOnInit() {
     this.isLoading = true;
-    this.marqueDispo = this.marqueDispo;
+    this.marqueDispo = this.computerService.marqueDispo;
     this.typeDispo = this.computerService.typeDispo;
+    this.categoriesDispo = this.computerService.categoriesDispo;
     this.computerService.getById(+this.activatedRoute.snapshot.paramMap.get('id'))
       .subscribe(data => {
         this.editComputerForm = data;
