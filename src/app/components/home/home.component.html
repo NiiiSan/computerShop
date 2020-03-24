@@ -7,9 +7,9 @@
 </ng-container>
 
 <ng-container *ngIf="!isLoading">
-  <h1>{{ computers.length }} ordinateurs en stock</h1>
-  <table class="table">
-    <thead>
+  <h1 class="text-center">{{ computers.length }} ordinateurs en stock</h1>
+  <table class="table table-striped">
+    <thead class="thead-dark">
     <tr>
       <th scope="col">#</th>
       <th scope="col">Modèle</th>
@@ -20,6 +20,7 @@
       <th scope="col">Prix d'achat</th>
       <th scope="col">Prix de vente</th>
       <th scope="col">Bénéfice</th>
+      <th scope="col"></th>
     </tr>
     </thead>
     <tbody>
