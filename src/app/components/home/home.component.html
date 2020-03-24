@@ -1,0 +1,44 @@
+<ng-container *ngIf="isLoading">
+  <div class="d-flex justify-content-center">
+    <div class="spinner-border" role="status">
+      <span class="sr-only">Chargement en cours</span>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!isLoading">
+  <h1>{{ computers.length }} ordinateurs en stock</h1>
+  <table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Modèle</th>
+      <th scope="col">Marque</th>
+      <th scope="col">Type</th>
+      <th scope="col">Catégorie</th>
+      <th scope="col">Date d'entrée en stock</th>
+      <th scope="col">Prix d'achat</th>
+      <th scope="col">Prix de vente</th>
+      <th scope="col">Bénéfice</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let computer of computers">
+      <th scope="row">{{ computer.id }}</th>
+      <td>{{ computer.modele }}</td>
+      <td>{{ computer.marque }}</td>
+      <td>{{ computer.type }}</td>
+      <td>{{ computer.categorie }}</td>
+      <td>{{ computer.dateEntreeMagasin|date: "d/MM/y" }}</td>
+      <td>{{ computer.prixAchat }}€</td>
+      <td>{{ computer.prixVente }}€</td>
+      <td>{{ computer.prixVente - computer.prixAchat }}€</td>
+      <td>
+        <button class="btn btn-success cursor-pointer m-1" type="button" [routerLink]="['/edit', computer.id]">Editer</button><br>
+        <button class="btn btn-warning cursor-pointer m-1" type="button" [routerLink]="['/computer/', computer.id]">Voir le détail</button><br>
+        <button class="btn btn-danger cursor-pointer m-1" type="button" (click)="deleteComputer(computer)">Supprimer</button><br>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</ng-container>

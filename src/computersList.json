@@ -1,0 +1,44 @@
+{
+  "computer": [
+    {
+      "id": 1,
+      "modele": "XR-3589",
+      "marque": "Apple",
+      "type": "portable",
+      "categorie": "gaming",
+      "dateEntreeMagasin": "02-12-2020",
+      "prixAchat": 845,
+      "prixVente": 1200
+    },
+    {
+      "id": 2,
+      "modele": "TF-8925",
+      "marque": "HP",
+      "type": "fixe",
+      "categorie": "bureautique",
+      "dateEntreeMagasin": "08-25-2019",
+      "prixAchat": 985,
+      "prixVente": 1100
+    },
+    {
+      "id": 3,
+      "modele": "YU-8974",
+      "marque": "Dell",
+      "type": "tablette hybride",
+      "categorie": "1er Prix",
+      "dateEntreeMagasin": "04-23-2020",
+      "prixAchat": 356,
+      "prixVente": 500
+    },
+    {
+      "id": 4,
+      "modele": "RC-8963",
+      "marque": "Asus",
+      "type": "fixe",
+      "categorie": "gaming",
+      "dateEntreeMagasin": "11-21-2020",
+      "prixAchat": 1450,
+      "prixVente": 1600
+    }
+  ]
+}
